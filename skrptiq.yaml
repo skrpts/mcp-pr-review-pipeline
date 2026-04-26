@@ -1,0 +1,44 @@
+# --- Identity ---
+id: "9de9f1f1-4e3c-4e11-a7c5-d1028a278dc4"
+name: "mcp-pr-review-pipeline"
+display_name: "MCP PR Review Pipeline"
+description: "Multi-agent pull request review via GitHub MCP — security, quality, and style agents with a human gate before posting"
+version: "1.0.0"
+engine: ">=1.0.0"
+
+# --- Attribution ---
+author:
+  name: "skrptiq"
+  url: "https://hub.skrptiq.ai"
+
+licence: "MIT"
+repository: "https://github.com/skrpts/mcp-pr-review-pipeline"
+
+# --- Discovery (Hub) ---
+category: "developer"
+tags:
+  - "mcp"
+  - "code-review"
+  - "pull-requests"
+  - "security"
+
+# --- Security & Access ---
+requires:
+  services:
+    - "llm-service"
+    - "github-mcp"
+  permissions:
+    - "network:github.com"
+  data_handling:
+    - "source-code"
+
+# --- Contents ---
+contents:
+  skills: 6
+  prompts: 6
+  workflows: 1
+  services: 2
+  sources: 0
+  documents: 0
+  assets: 0
+  total: 15
