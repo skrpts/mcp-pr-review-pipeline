@@ -4,6 +4,13 @@ id: fetch-pr-data
 title: Fetch PR Data
 description: "Retrieves and structures pull request data from GitHub via MCP"
 tags: [Production, Code]
+inputs:
+  pr_url:
+    label: "Pull Request URL"
+    description: "GitHub pull request URL or owner/repo#number"
+    example: "https://github.com/acme/api/pull/42"
+    required: true
+    type: text
 connections:
   - target: pr-data-fetch
     type: derived_from
