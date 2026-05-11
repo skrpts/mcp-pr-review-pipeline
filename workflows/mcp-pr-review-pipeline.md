@@ -41,12 +41,21 @@ execution:
     - skill: "security-review"
       step_type: "review"
       prompt: "security-analysis"
+      context:
+        voice_profile: ""
+        severity_threshold: ""
     - skill: "quality-review"
       step_type: "review"
       prompt: "quality-analysis"
+      context:
+        voice_profile: ""
+        review_depth: ""
     - skill: "style-review"
       step_type: "review"
       prompt: "style-analysis"
+      context:
+        voice_profile: ""
+        style_strictness: ""
   - skill: "review-gate"
     step_type: "validation"
     prompt: "review-gate-summary"
