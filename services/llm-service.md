@@ -2,7 +2,7 @@
 type: service
 id: llm-service
 title: LLM Service
-description: "Language model service for code analysis, security scanning, and review generation"
+description: "Language model service for analysis, synthesis, and document generation"
 tags: [Production, Tested]
 connections: []
 metadata:
@@ -12,20 +12,20 @@ metadata:
 
 ## LLM Service
 
-This skrpt uses a language model for analytical and generative tasks. The LLM handles code analysis, security scanning, style checking, and review synthesis across each stage of the pipeline.
+This skrpt uses a language model for analytical and generative tasks. The LLM handles structured analysis, content synthesis, document generation, and quality validation across each stage of the workflow.
 
 ### Usage Pattern
 
-The LLM is invoked at each stage of the pipeline. The parallel review agents (security, quality, style) each run independent analysis passes. The gate step synthesises findings into a human-readable summary. The final posting step formats the approved review for GitHub.
+The LLM is invoked at each stage of the pipeline. Earlier stages produce structured analysis (frameworks, assessments, breakdowns), while later stages synthesise outputs into coherent documents. The final stage is typically the most token-intensive, requiring cross-referencing across all previous outputs.
 
 ### Configuration
 
-- **Temperature:** 0.2 for security and style analysis, 0.4 for quality review and synthesis
-- **Max tokens:** 4,000 per review agent, 8,000 for the gate synthesis step
-- **Context window:** Each parallel agent receives the full PR diff. The gate step receives all three agent outputs.
+- **Temperature:** 0.3 for structured analysis tasks, 0.5 for narrative and synthesis tasks
+- **Max tokens:** 4,000 per invocation, 8,000–10,000 for final assembly stages
+- **Context window:** Each stage receives the outputs of all previous stages. The assembly stage requires the full context window.
 
 ### Requirements
 
 - A configured LLM provider in skrptiq settings
-- Sufficient token quota for the full pipeline (typically 20,000–30,000 tokens per review)
+- Sufficient token quota for the full pipeline
 - No external network access required beyond your AI provider's endpoint
