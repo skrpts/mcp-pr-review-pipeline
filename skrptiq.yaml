@@ -1,9 +1,9 @@
 # --- Identity ---
-id: "9de9f1f1-4e3c-4e11-a7c5-d1028a278dc4"
+id: "946666b0-ad47-4bd1-aeda-d5c48e33bd82"
 name: "mcp-pr-review-pipeline"
 display_name: "MCP PR Review Pipeline"
 description: "Multi-agent pull request review via GitHub MCP — security, quality, and style agents with a human gate before posting"
-version: "1.0.12"
+version: "1.0.13"
 engine: ">=0.1.0"
 
 # --- Attribution ---
