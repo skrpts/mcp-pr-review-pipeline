@@ -37,31 +37,37 @@ execution:
   - skill: "pr-data-fetch"
     step_type: "generation"
     prompt: "fetch-pr-data"
+    output: { name: "pr_data", type: "text" }
   - parallel:
     - skill: "security-review"
       step_type: "review"
       prompt: "security-analysis"
+      output: { name: "security_review", type: "text" }
       context:
         voice_profile: "Neutral professional tone"
         severity_threshold: "Medium"
     - skill: "quality-review"
       step_type: "review"
       prompt: "quality-analysis"
+      output: { name: "quality_review", type: "text" }
       context:
         voice_profile: "Neutral professional tone"
         review_depth: "Standard"
     - skill: "style-review"
       step_type: "review"
       prompt: "style-analysis"
+      output: { name: "style_review", type: "text" }
       context:
         voice_profile: "Neutral professional tone"
         style_strictness: "Standard"
   - skill: "review-gate"
     step_type: "validation"
     prompt: "review-gate-summary"
+    output: { name: "gate_decision", type: "decision" }
   - skill: "review-posting"
     step_type: "content"
     prompt: "post-review"
+    output: { name: "posted_review", type: "text" }
 ---
 
 ## Overview

@@ -3,7 +3,7 @@ id: "946666b0-ad47-4bd1-aeda-d5c48e33bd82"
 name: "mcp-pr-review-pipeline"
 display_name: "MCP PR Review Pipeline"
 description: "Multi-agent pull request review via GitHub MCP — security, quality, and style agents with a human gate before posting"
-version: "1.0.13"
+version: "1.0.14"
 engine: ">=0.1.0"
 
 # --- Attribution ---
@@ -48,3 +48,17 @@ contents:
   documents: 0
   assets: 0
   total: 14
+
+security:
+  status: "pass"
+  scanned_at: "2026-07-03T11:03:23.189Z"
+  scanner_version: "3.3.0"
+  syntactic: "pass"
+  structural: "pass"
+  detected:
+    services: ["llm-service"]
+    permissions: ["filesystem:read"]
+    data_handling: []
+  undeclared: []
+  warnings: []
+  report_url: "https://hub.skrptiq.ai/skrpts/mcp-pr-review-pipeline/security"
