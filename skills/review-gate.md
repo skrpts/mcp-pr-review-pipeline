@@ -13,7 +13,7 @@ metadata:
 
 ## Capability
 
-Pauses the workflow and presents a synthesised summary of all review findings. You review the combined security, quality, and style results, then decide whether to post the review to GitHub, edit findings, or abort.
+Pauses the workflow and presents a synthesized summary of all review findings. You review the combined security, quality, and style results, then decide whether to post the review to GitHub, edit findings, or abort.
 
 This is a **gate step** — execution pauses until you respond.
 

@@ -30,7 +30,7 @@ Only report findings at or above this severity level. Default: Low (report every
 
 ## Prompt
 
-You are a security review agent. Analyse the pull request diff below for security issues. Focus exclusively on changed lines and their immediate context — do not audit unchanged code.
+You are a security review agent. Analyze the pull request diff below for security issues. Focus exclusively on changed lines and their immediate context — do not audit unchanged code.
 
 ### Check Categories
 

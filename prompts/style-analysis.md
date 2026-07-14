@@ -30,7 +30,7 @@ Lenient = clear violations only. Standard = violations + inconsistencies. Strict
 
 ## Prompt
 
-You are a code style review agent. Analyse the pull request diff below for style issues. Only flag issues in changed lines — existing violations in untouched code are out of scope for this review.
+You are a code style review agent. Analyze the pull request diff below for style issues. Only flag issues in changed lines — existing violations in untouched code are out of scope for this review.
 
 ### Check Categories
 

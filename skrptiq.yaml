@@ -3,7 +3,7 @@ id: "946666b0-ad47-4bd1-aeda-d5c48e33bd82"
 name: "mcp-pr-review-pipeline"
 display_name: "MCP PR Review Pipeline"
 description: "Multi-agent pull request review via GitHub MCP — security, quality, and style agents with a human gate before posting"
-version: "1.0.14"
+version: "1.0.15"
 engine: ">=0.1.0"
 
 # --- Attribution ---
@@ -28,6 +28,10 @@ dependencies:
     name: "llm-service"
     version: 1.0.1
     checksum: "sha256:455c8bf590a9426d830bffd1a741afa058149bc29c58186c34d0d8699bea4bda"
+  - id: "f4c0bfa9-5588-4590-ab27-ca696bcd959f"
+    name: "github-mcp"
+    version: 1.0.0
+    checksum: "sha256:705e6376b99589c5d34916f5559068517c25c9e5151461212fada3039ff7c5e4"
 
 requires:
   services:
@@ -43,21 +47,21 @@ contents:
   skills: 6
   prompts: 6
   workflows: 1
-  services: 1
+  services: 0
   sources: 0
   documents: 0
   assets: 0
-  total: 14
+  total: 13
 
 security:
   status: "pass"
-  scanned_at: "2026-07-03T15:56:41.243Z"
+  scanned_at: "2026-07-14T11:42:25.714Z"
   scanner_version: "3.3.0"
   syntactic: "pass"
   structural: "pass"
   detected:
-    services: ["llm-service"]
-    permissions: ["filesystem:read"]
+    services: ["github-mcp", "llm-service"]
+    permissions: []
     data_handling: []
   undeclared: []
   warnings: []
