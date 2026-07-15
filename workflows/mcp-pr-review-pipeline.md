@@ -62,6 +62,7 @@ execution:
         style_strictness: "Standard"
   - skill: "review-gate"
     step_type: "validation"
+    gate: true
     prompt: "review-gate-summary"
     output: { name: "gate_decision", type: "decision" }
   - skill: "review-posting"

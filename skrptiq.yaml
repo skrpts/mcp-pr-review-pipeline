@@ -3,7 +3,7 @@ id: "946666b0-ad47-4bd1-aeda-d5c48e33bd82"
 name: "mcp-pr-review-pipeline"
 display_name: "MCP PR Review Pipeline"
 description: "Multi-agent pull request review via GitHub MCP — security, quality, and style agents with a human gate before posting"
-version: "1.0.15"
+version: "1.0.16"
 engine: ">=0.1.0"
 
 # --- Attribution ---
@@ -55,7 +55,7 @@ contents:
 
 security:
   status: "pass"
-  scanned_at: "2026-07-14T11:42:25.714Z"
+  scanned_at: "2026-07-15T11:39:18.496Z"
   scanner_version: "3.3.0"
   syntactic: "pass"
   structural: "pass"
